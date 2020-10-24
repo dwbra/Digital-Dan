@@ -1,0 +1,212 @@
+$primary-color: #fff234;
+$accent-color: orange;
+$button-color: #fff234;
+$button-hover-color: orange;
+$a-color: blue;
+
+.box {
+    color: blue;
+    li {
+        background-color: red;
+    }
+    a {
+        color: black;
+        font-size: 20px;
+    }
+}
+
+@mixin bold-italic {
+    font-weight: bold;
+    font-style: italic;
+}
+
+@mixin header-font {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@mixin headers {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+@mixin para-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+
+/*Start Code Here */
+
+h1, h2, h3, h4, h5, h6, a, button {
+    font-family: 'Lato', sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+p {
+   font-family: 'Poppins', sans-serif;
+   font-size: 18px;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    color: white;
+}
+
+nav {
+    color: white
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    border: black 2px solid;
+    padding: 5px;
+    box-shadow: black 3px 3px;
+    margin: 5px;
+}
+
+a:hover {
+ background-color: black;
+}
+
+a:after{
+
+}
+
+button {
+    background-color: #25c2c7;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: -14px;
+  right: -20px;
+  transition: 0.5s;
+  font-size: 36px;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid #25c2c7;
+}
+
+.button:after {
+    transform: none;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.column2 {
+    float: left;
+    width: 33.3%;
+    padding-left: 200px;
+    padding-top: 40px;
+    background-image: url(https://cdn.lynda.com/course/424947/424947-637260802118087572-16x9.jpg);
+}
+
+.navigation {
+    background-color: #25c2c7,;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.social {
+    background-color: white;
+    display: flex;
+    border: red 2px solid;
+    flex-direction: row-reverse;
+}
+
+.social-img {
+    max-width: 30px;
+    max-height: 30px;
+    border: red 2px solid;
+}
+
+.row {
+    display: flex;
+}
+
+.portfolio-section {
+    padding-left: 200px;
+    padding-top: 40px;
+}
+
+.intro {
+    padding-top: 80px;
+    padding-right: 60px;
+}
+
+#logo {
+    max-width: 200px;
+    max-height: 150px;
+}
+
+#headshot {
+    max-width: 400px;
+    max-height: 400px;
+    padding-top: 40px;
+    padding-left: 200px;
+}
+
+#logo {
+    max-width: 100px;
+    max-height: 80px;
+}
+
+/* Mobile Phone Screen Size */
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+

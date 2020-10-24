@@ -154,21 +154,19 @@ button {
     font-size: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     padding: 15px;
 }
 
 .social {
     background-color: white;
-    display: flex;
     border: red 2px solid;
-    flex-direction: row-reverse;
+    align-items: center;
 }
 
-.social-img {
-    max-width: 30px;
-    max-height: 30px;
-    border: red 2px solid;
+.iconify {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .row {

@@ -67,6 +67,12 @@ body {
     color: white;
 }
 
+.iconify { 
+    width: 40px; 
+    height: 40px; 
+}
+
+
 nav {
     color: white
 }
@@ -136,17 +142,26 @@ button {
     transform: none;
 }
 
-.column {
-    float: left;
-    width: 50%;
-}
+// .column {
+//     float: left;
+//     width: 50%;
+// }
+
+// .col2 {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // flex-direction: column;
+// }
 
 .column2 {
     float: left;
     width: 33.3%;
-    padding-left: 200px;
     padding-top: 40px;
+    padding-left: 200px;
     background-image: url(https://cdn.lynda.com/course/424947/424947-637260802118087572-16x9.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .navigation {
@@ -155,23 +170,35 @@ button {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 15px;
+    padding-right: 100px;
 }
 
 .social {
-    background-color: white;
-    border: red 2px solid;
-    align-items: center;
-}
-
-.iconify {
+    background-color: #25c2c7;
     display: flex;
     justify-content: flex-end;
+    padding-right: 100px;
 }
+
+// .social-img {
+//     max-width: 30px;
+//     max-height: 30px;
+//     border: red 2px solid;
+// }
 
 .row {
     display: flex;
-}
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
 
 .portfolio-section {
     padding-left: 200px;
@@ -184,20 +211,17 @@ button {
 }
 
 #logo {
-    max-width: 200px;
-    max-height: 150px;
+    max-width: 90px;
+    max-height: 100px;
+    display: flex;
+    justify-content: left;
 }
 
-#headshot {
-    max-width: 400px;
-    max-height: 400px;
+.headshot {
     padding-top: 40px;
     padding-left: 200px;
-}
-
-#logo {
-    max-width: 100px;
-    max-height: 80px;
+    max-width: 200px;
+    max-height: 50px;
 }
 
 /* Mobile Phone Screen Size */
@@ -207,4 +231,3 @@ button {
       width: 100%;
     }
   }
-

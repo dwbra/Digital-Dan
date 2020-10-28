@@ -42,6 +42,11 @@ h1, h2, h3, h4, h5, h6, a, button {
     font-family: 'Lato', sans-serif;
 }
 
+h1:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
 h2 {
     font-size: 32px;
     letter-spacing: 2px;
@@ -66,12 +71,6 @@ body {
     margin: 0;
     color: white;
 }
-
-.iconify { 
-    width: 40px; 
-    height: 40px; 
-}
-
 
 nav {
     color: white
@@ -103,7 +102,7 @@ button {
     border: none;
     font-size: 18px;
     text-align: center;
-    width: 150px;
+    width: 160px;
     transition: all 0.5s;
     cursor: pointer;
     border-radius: 25px;
@@ -155,6 +154,15 @@ button {
     // justify-content: center;
     // flex-direction: column;
 // }
+
+.iconify { 
+    width: 40px; 
+    height: 40px; 
+}
+
+.iconify:hover {
+    color: black;
+}
 
 .column2 {
     float: left;
@@ -241,6 +249,7 @@ button {
     grid-template-rows: auto, auto;
     background-color: black;
   }
+
   .grid-item {
     text-align: left;
     padding-left: 50px;
@@ -264,3 +273,43 @@ button {
     justify-content: flex-end;
     padding-right: 100px;
 }
+
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    background-color: black;
+  }
+
+  .grid-p1 {
+      text-align: left;
+      margin-left: 50px;
+  }
+
+  .grid-1c {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: black;
+  }
+
+  .grid-social {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    background-color: black;
+    margin-bottom: 50px;
+  }
+
+  .grid-footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    background-color: #25c2c7;
+    margin-top: 20px;
+  }
+
+  .grid-4c {
+    text-align: left;
+    margin-left: 50px;
+  }

@@ -1,8 +1,5 @@
-$primary-color: #fff234;
+$primary-color: #25c2c7;
 $accent-color: orange;
-$button-color: #fff234;
-$button-hover-color: orange;
-$a-color: blue;
 
 .box {
     color: blue;
@@ -42,11 +39,6 @@ h1, h2, h3, h4, h5, h6, a, button {
     font-family: 'Lato', sans-serif;
 }
 
-h1:hover {
-    transform: scale(1.2);
-    transition: all 0.5s;
-}
-
 h2 {
     font-size: 32px;
     letter-spacing: 2px;
@@ -72,31 +64,20 @@ body {
     color: white;
 }
 
-nav {
-    color: white
-}
+// a {
+//     color: white;
+//     text-decoration: none;
+//     border: black 2px solid;
+//     padding: 10px;
+//     box-shadow: black 3px 3px;
+//     margin: 5px;
+//     position: relative;
+//     top: 30px; 
+// }
 
-a {
-    color: white;
-    text-decoration: none;
-    border: black 2px solid;
-    padding: 10px;
-    box-shadow: black 3px 3px;
-    margin: 5px;
-    position: relative;
-    top: 30px;
-}
-
-a:hover {
- background-color: black;
-}
-
-a:after{
-
-}
 
 button {
-    background-color: #25c2c7;
+    background-color: $primary-color;
     color: white;
     padding: 10px;
     border: none;
@@ -136,7 +117,7 @@ button {
 
 .button:hover {
     background-color: transparent;
-    border: 2px solid #25c2c7;
+    border: 2px solid $primary-color;
 }
 
 .button:after {
@@ -175,7 +156,7 @@ button {
 }
 
 .navigation {
-    background-color: #25c2c7,;
+    background-color: $primary-color,;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -184,7 +165,7 @@ button {
 }
 
 .social {
-    background-color: #25c2c7;
+    background-color: $primary-color;
     display: flex;
     justify-content: flex-end;
     padding-right: 100px;
@@ -220,11 +201,6 @@ button {
     padding-right: 60px;
 }
 
-#logo {
-    max-width: 90px;
-    max-height: 100px;
-}
-
 .headshot {
     padding-top: 40px;
     padding-left: 100px;
@@ -233,6 +209,44 @@ button {
 #headshot {
     width: 400px;
     height: 400px;
+}
+
+#logo {
+    max-width: 90px;
+    max-height: 100px;
+}
+
+#logo:hover {
+    transform: scale(0.8);
+}
+
+#nav-buttons {
+    color: white;
+    text-decoration: none;
+    border: black 2px solid;
+    padding: 10px;
+    box-shadow: black 3px 3px;
+    margin: 5px;
+    position: relative;
+    top: 30px; 
+}
+
+#nav-buttons:hover {
+    background-color: black;
+}
+
+#logotext {
+    text-decoration: none;
+}
+
+#logotext:hover {
+    transform: scale(0.8);
+    transition: all 0.5s;
+}
+
+#logotext:visited {
+    color: white;
+    text-decoration: none;
 }
 
 /* Mobile Phone Screen Size */
@@ -259,13 +273,13 @@ button {
   .navgrid {
       display: grid;
       grid-template-columns: auto auto auto;
-      background-color: #25c2c7;
+      background-color: $primary-color;
       font-size: 20px;
   }
 
   .navgrid-item {
       display: flex;
-      justify-content: space-evenly ;
+      justify-content: space-evenly;
   }
 
   .navgrid-flexend {
@@ -276,7 +290,7 @@ button {
 
 .grid-portfolio {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
     background-color: black;
   }
@@ -295,7 +309,7 @@ button {
 
   .grid-social {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto;
     background-color: black;
     margin-bottom: 50px;
@@ -303,9 +317,9 @@ button {
 
   .grid-footer {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
-    background-color: #25c2c7;
+    background-color: $primary-color;
     margin-top: 20px;
   }
 
@@ -319,4 +333,5 @@ button {
     font-size: 14px;
     text-align: center;
     padding: 15px;
+    background-color: #218083;
   }

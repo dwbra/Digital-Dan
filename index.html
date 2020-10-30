@@ -9,10 +9,22 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
         <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myLinks");
+              if (x.style.display === "block") {
+                x.style.display = "none";
+              } else {
+                x.style.display = "block";
+              }
+            }
+            </script>
     </head>
     <body>
         <header>
         <div class="social">
+            <p style="margin-right: 165px;">Trusted Software Development From Sydney, Australia</p>
             <p>HTML | CSS | Javascript</p>
             <ul>
             <span class="iconify" data-icon="fa-brands:twitter-square" data-inline="false"></span>
@@ -26,12 +38,12 @@
             </div>
         <div class="navgrid-item">            
         </div>
-        <div class="navgrid-flexend">
+        <div class="navgrid-flexend nav">
             <nav>
-            <a href="index.html" id="nav-buttons">Home</a>
-            <a href="pages/about.html" id="nav-buttons">About</a>
-            <a href="pages/portfolio.html" id="nav-buttons">Portfolio</a>
-            <a href="pages/contact.html" id="nav-buttons">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/portfolio.html">Portfolio</a>
+            <a href="pages/contact.html">Contact</a>
             </nav>
         </div>
         </div>
@@ -39,12 +51,12 @@
     </header>
     <main>
             <div class="grid-container">
-                <div class="grid-item headshot">
+                <div class="grid-item headshot headshot-grayscale">
                     <img src="img/Headshot.jpg" id="headshot">
                 </div>
                 <div class="grid-item">
                     <h2>Hi, welcome to my website!</h2>
-                    <p>My name is Daniel Workman. I'm a junior full stack developer who is learnining to code at Coder Academy. I've completed a Bachelor of Commerce majoring in Mareting at UOW and currently work in a marketing agency. I love surfing, music, reading, golf, tennis, the gym and any sort of outdoor activity. Despite my love of the great outdoors I also love to code! Coding is great as it presents challenges daily and is an avenue for continuous learning.</p>
+                    <p id="introtext">My name is Daniel Workman. I'm a junior full stack developer who is learnining to code at Coder Academy. I've completed a Bachelor of Commerce majoring in Mareting at UOW and currently work in a marketing agency. I love surfing, music, reading, golf, tennis, the gym and any sort of outdoor activity. Despite my love of the great outdoors I also love to code! Coding is great as it presents challenges daily and is an avenue for continuous learning.</p>
                     <button class="button"><span>Learn More</span></button>
                 </div>
               </div>
@@ -66,14 +78,35 @@
               </div>
               <div class="grid-social">
                   <div class="grid-p1">
-                      <h3>Check Out My LinkedIn Profile</h3>
-                      <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="danielworkman1"><a class="LI-simple-link" href='https://au.linkedin.com/in/danielworkman1?trk=profile-badge'>Daniel Workman</a></div>
+                      <h4>Check Out My LinkedIn Profile</h4>
+                      <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="danielworkman1"><a class="LI-simple-link" href='https://au.linkedin.com/in/danielworkman1?trk=profile-badge'>Daniel Workman</a></div>
                   </div>
                   <div class="grid-p1">
-                      <h3>Check out my Twitter Profile</h3>
-                      <a href="https://twitter.com/intent/tweet?screen_name=dan_workman92&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @dan_workman92</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                      <h4>Check out my Twitter Profile</h4>
                       <a class="twitter-timeline" href="https://twitter.com/dan_workman92?ref_src=twsrc%5Etfw">Tweets by dan_workman92</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                   </div>
+              </div>
+              <div class="contact-grid">
+                  <h3>Need something developed? I'd love to help!</h3>
+                  <p>Use the contact form below to send me a message and I'll get back to you ASAP.</p>
+                  <form class="contact">
+                      <div class="leftrightgoodnight">
+                        <label>First Name </label>
+                        <input type="text">
+                        <label>Last Name </label>
+                        <input type="text">
+                    </div>
+                    <!-- <div class="leftrightgoodnight"> -->
+                        <label>Phone Number</label>
+                        <input type="text">
+                        <label>Email</label>
+                        <input type="text">
+                    <!-- </div> -->
+                    <label>Message</label>
+                    <textarea></textarea>
+                    <button>Submit</button>
+                  </form>
+                </div>
               </div>
         </main>
     </body>
@@ -84,19 +117,16 @@
                       </div>
                       <div class="grid-4c">
                           <h4>Helpful Links</h4>
-                          <ul>
-                              <p>Link 1</p>
-                              <p>Link 2</p>
-                              <p>Link 3</p>
-                              <p>Link 4</p>
-                          </ul>
+                              <p>GitHub</p>
+                              <p>Coder Pen</p>
+                              <p>Stack Overflow</p>
+                              <p>Hacker News</p>
+                              <p>Sitemap</p>
                       </div>
                       <div class="grid-4c">
                           <h4>Contact Me & Start A Conversation!</h4>
-                          <ul>
-                              <p>TESTESTEST</p>
-                              <p>TESTESTEST</p>
-                          </ul>
+                            <a href="https://twitter.com/intent/tweet?screen_name=dan_workman92&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @dan_workman92</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <p>TESTESTEST</p>
                       </div>
                       <div class="grid-4c">
                           <h4>Shout Outs To Coder Academy!</h4>

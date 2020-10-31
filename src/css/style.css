@@ -1,17 +1,18 @@
-@charset "UTF-8";
 .box {
   color: blue;
 }
+
 .box li {
   background-color: red;
 }
+
 .box a {
   color: black;
   font-size: 20px;
 }
 
 h1, h2, h3, h4, h5, h6, a, button {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h2 {
@@ -30,7 +31,7 @@ h4 {
 }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
 }
 
@@ -48,6 +49,7 @@ button {
   font-size: 18px;
   text-align: center;
   width: 160px;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
   border-radius: 25px;
@@ -57,15 +59,17 @@ button {
   cursor: pointer;
   display: inline-block;
   position: relative;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .button span:after {
-  content: "»";
+  content: '\00bb';
   position: absolute;
   opacity: 0;
   top: -14px;
   right: -20px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   font-size: 36px;
 }
@@ -85,22 +89,26 @@ button {
 }
 
 .button:after {
-  transform: none;
+  -webkit-transform: none;
+          transform: none;
 }
 
 .nav {
   color: white;
 }
+
 .nav a {
   color: white;
   text-decoration: none;
   border: black 2px solid;
-  box-shadow: black 3px 3px;
+  -webkit-box-shadow: black 3px 3px;
+          box-shadow: black 3px 3px;
   margin: 5px;
   padding: 10px;
   position: relative;
   top: 30px;
 }
+
 .nav a:hover {
   background-color: black;
 }
@@ -114,21 +122,19 @@ button {
   color: black;
 }
 
-.column2 {
-  float: left;
-  width: 33.3%;
-  padding-top: 40px;
-  padding-left: 200px;
-  background-image: url(https://cdn.lynda.com/course/424947/424947-637260802118087572-16x9.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
 .social {
   background-color: #25c2c7;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-right: 100px;
+}
+
+.social a {
+  color: white;
 }
 
 .portfolio-section {
@@ -163,7 +169,8 @@ button {
 }
 
 #logo:hover {
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 #logotext {
@@ -171,7 +178,9 @@ button {
 }
 
 #logotext:hover {
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -181,59 +190,67 @@ button {
 }
 
 #introtext {
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 /* Mobile Phone Screen Size */
 @media only screen and (max-width: 768px) {
-  body {
-    display: block;
-    overflow: hidden;
-  }
-
   .social {
     display: none;
   }
-
   #logotext {
     display: none;
   }
+  .contact {
+    padding: 25px;
+  }
+  #headshot {
+    height: 150px;
+    width: 150px;
+  }
 }
+
 .grid-container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto, auto;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   background-color: black;
 }
 
-.grid-item {
-  text-align: left;
-  padding-left: 50px;
-  padding-top: 60px;
-}
-
 .navgrid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   background-color: #25c2c7;
   font-size: 20px;
 }
 
 .navgrid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .navgrid-flexend {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-right: 100px;
 }
 
 .grid-portfolio {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: auto;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   background-color: black;
 }
 
@@ -243,26 +260,39 @@ button {
 }
 
 .grid-1c {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   background-color: black;
   margin-top: 30px;
 }
 
 .grid-social {
-  display: flex;
-  justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   background-color: black;
   margin-bottom: 50px;
   margin-top: 30px;
 }
 
 .grid-footer {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: auto;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   background-color: #25c2c7;
+}
+
+.grid-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.grid-footer a:hover {
+  color: black;
 }
 
 .grid-4c {
@@ -271,7 +301,7 @@ button {
 }
 
 .copyright {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   text-align: center;
   padding: 15px;
@@ -279,8 +309,13 @@ button {
 }
 
 .contact-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   background-color: grey;
   padding-bottom: 30px;
@@ -290,15 +325,24 @@ button {
 
 .contact {
   color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .contact form, .contact label, .contact input, .contact textarea, .contact button {
   width: 250px;
   padding: 10px;
   margin: 5px;
 }
+
 .contact input {
   border: none;
   border-bottom: 2px white solid;
@@ -306,26 +350,23 @@ button {
   color: white;
   font-size: 16px;
 }
+
 .contact button {
   margin-top: 20px;
 }
+
 .contact label {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   color: white;
 }
+
 .contact button:hover {
   background-color: transparent;
   border: 2px solid #25c2c7;
 }
+
 .contact textarea {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-
-.leftrightgoodnight {
-  float: left;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
 /*# sourceMappingURL=style.css.map */

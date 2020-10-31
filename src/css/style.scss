@@ -274,7 +274,35 @@ button {
 #introtext {
     margin-right: 50px;
 }
+
+.navgrid-flexend {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
 /* Mobile Phone Screen Size */
+
+@media only screen and (min-width: 768px) {
+    .hamburger {
+        display: none !important;
+        a {
+            display: none !important;
+        }
+        i {
+            display: none !important;
+        }
+        .navgrid-flexend {
+            a {
+                display: none;
+            }
+        }
+        nav {
+            a {
+                display: none !important;
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .social {
@@ -283,12 +311,15 @@ button {
     #logotext {
         display: none;
   }
-  .contact {
+    .contact {
       padding: 25px;
   }
-  #headshot {
+    #headshot {
       height: 150px;
       width: 150px;
+  }
+  .navgrid-flexend {
+      display: none;
   }
 }
 
@@ -317,12 +348,6 @@ button {
       display: flex;
       justify-content: space-evenly;
   }
-
-  .navgrid-flexend {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 100px;
-}
 
 .grid-portfolio {
     display: grid;

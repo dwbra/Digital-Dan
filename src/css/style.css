@@ -193,7 +193,35 @@ button {
   margin-right: 50px;
 }
 
+.navgrid-flexend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 100px;
+}
+
 /* Mobile Phone Screen Size */
+@media only screen and (min-width: 768px) {
+  .hamburger {
+    display: none !important;
+  }
+  .hamburger a {
+    display: none !important;
+  }
+  .hamburger i {
+    display: none !important;
+  }
+  .hamburger .navgrid-flexend a {
+    display: none;
+  }
+  .hamburger nav a {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .social {
     display: none;
@@ -207,6 +235,9 @@ button {
   #headshot {
     height: 150px;
     width: 150px;
+  }
+  .navgrid-flexend {
+    display: none;
   }
 }
 
@@ -234,16 +265,6 @@ button {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-.navgrid-flexend {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-right: 100px;
 }
 
 .grid-portfolio {

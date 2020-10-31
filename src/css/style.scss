@@ -55,6 +55,11 @@ body {
     color: white;
 }
 
+// nav {
+//     display: flex;
+//     justify-content: flex-end;
+// }
+
 // a {
 //     color: white;
 //     text-decoration: none;
@@ -278,31 +283,17 @@ button {
 .navgrid-flexend {
     display: flex;
     justify-content: flex-end;
-    padding-right: 100px;
 }
-/* Mobile Phone Screen Size */
+
+//This is the CSS for Desktop View //
 
 @media only screen and (min-width: 768px) {
     .hamburger {
-        display: none !important;
-        a {
-            display: none !important;
-        }
-        i {
-            display: none !important;
-        }
-        .navgrid-flexend {
-            a {
-                display: none;
-            }
-        }
-        nav {
-            a {
-                display: none !important;
-            }
-        }
+        display: none;
     }
 }
+
+//This is the CSS for Mobile View //
 
 @media only screen and (max-width: 768px) {
     .social {
@@ -310,20 +301,69 @@ button {
     }
     #logotext {
         display: none;
-  }
+    }
     .contact {
       padding: 25px;
-  }
+    }
     #headshot {
       height: 150px;
       width: 150px;
-  }
+    }
   .navgrid-flexend {
       display: none;
+    }
+  .hamburger {
+    position: relative;
+    top: 20px;
+    }
+  .nav {
+    color: white;
+    font-size: 12px;
+    a {
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-bottom: 1px solid black;
+        box-shadow: none;
+        display: list-item;
+    }
+    nav {
+        position: relative;
+        bottom: 40px;
+    }
+    a:hover {
+        background-color: black;
+    }
+  }
+  .grid-item {
+      padding-left: 20px;
+  }
+  .grid-1c {
+      position: relative;
+      right: 30px;
+  }
+  .grid-portfolio {
+    position: relative;
+    right: 30px;
+  }
+  .grid-social {
+    position: relative;
+    right: 30px;
+  }
+  .contact-grid {
+      padding: 10px;
+      p {
+          padding: 10px;
+      }
   }
 }
 
-  //This is all of the media queries for Mobile Devices //
+//This is the CSS for Tablet View //
+
+@media only screen and (max-width: 1024px) {
+}
+
+
 
   .grid-container {
     display: grid;

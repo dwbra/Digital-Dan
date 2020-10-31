@@ -200,25 +200,11 @@ button {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 100px;
 }
 
-/* Mobile Phone Screen Size */
 @media only screen and (min-width: 768px) {
   .hamburger {
-    display: none !important;
-  }
-  .hamburger a {
-    display: none !important;
-  }
-  .hamburger i {
-    display: none !important;
-  }
-  .hamburger .navgrid-flexend a {
     display: none;
-  }
-  .hamburger nav a {
-    display: none !important;
   }
 }
 
@@ -238,6 +224,51 @@ button {
   }
   .navgrid-flexend {
     display: none;
+  }
+  .hamburger {
+    position: relative;
+    top: 20px;
+  }
+  .nav {
+    color: white;
+    font-size: 12px;
+  }
+  .nav a {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-bottom: 1px solid black;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: list-item;
+  }
+  .nav nav {
+    position: relative;
+    bottom: 40px;
+  }
+  .nav a:hover {
+    background-color: black;
+  }
+  .grid-item {
+    padding-left: 20px;
+  }
+  .grid-1c {
+    position: relative;
+    right: 30px;
+  }
+  .grid-portfolio {
+    position: relative;
+    right: 30px;
+  }
+  .grid-social {
+    position: relative;
+    right: 30px;
+  }
+  .contact-grid {
+    padding: 10px;
+  }
+  .contact-grid p {
+    padding: 10px;
   }
 }
 

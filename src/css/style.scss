@@ -1,0 +1,498 @@
+//SCSS Syntaxes //
+$primary-color: #25c2c7;
+
+@mixin bold-italic {
+    font-weight: bold;
+    font-style: italic;
+}
+
+@mixin mainfont {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+@mixin blogfont {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: white;
+    font-style: italic;
+}
+
+//General Styling for All Header Elements and Paragraph//
+h1, h2, h3, h4, h5, h6, a, button {
+    font-family: 'Lato', sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 26px;
+    letter-spacing: 1.5px;
+}
+
+h4 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+p {
+   font-family: 'Poppins', sans-serif;
+   font-size: 18px;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    color: white;   
+}
+
+//Styling for the Button - Including an arrow on hover//
+button {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: -14px;
+  right: -20px;
+  transition: 0.5s;
+  font-size: 36px;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+}
+
+.button:after {
+    transform: none;
+}
+
+#button {
+    position: relative;
+    top: 60px;
+    right: 320px;
+}
+
+
+// Styling the navigation menu //
+.nav {
+    color: white;
+    a {
+        color: white;
+        text-decoration: none;
+        border: black 2px solid;
+        box-shadow: black 3px 3px;
+        margin: 5px;
+        padding: 10px;
+        position: relative;
+        top: 30px; 
+    }
+    a:hover {
+        background-color: black;
+    }
+}
+
+//Styling social icons //
+.iconify { 
+    width: 40px; 
+    height: 40px;
+}
+
+.iconify:hover {
+    color: black;
+}
+
+//Styling the social bars layout //
+.social {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+    a {
+        color: white;
+    }
+}
+
+
+.portfolio-section {
+    padding-left: 200px;
+    padding-top: 40px;
+}
+
+//Styling for Headshot hover greyscale //
+.headshot-grayscale {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+  }
+  
+  .headshot-grayscale:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+  }
+
+#headshot {
+    width: 400px;
+    height: 400px;
+}
+
+//Styling to force the logo width and hover changes //
+#logo {
+    max-width: 90px;
+    max-height: 100px;
+}
+
+#logo:hover {
+    transform: scale(0.8);
+}
+
+#logotext {
+    text-decoration: none;
+}
+
+#logotext:hover {
+    transform: scale(0.8);
+    transition: all 0.5s;
+}
+
+#logotext:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#logotext:link {
+    color: white;
+    text-decoration: none;
+}
+
+#introtext {
+    margin-top: 50px;
+    margin-right: 60px;
+    text-align: left;
+}
+
+.navgrid-flexend {
+    display: flex;
+    justify-content: flex-end;
+}
+
+//This is the CSS for Desktop View //
+
+@media only screen and (min-width: 1024px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+//This is the CSS for Mobile View //
+
+@media only screen and (max-width: 768px) {
+    .social {
+        display: none;
+    }
+    #logotext {
+        display: none;
+    }
+    .contact {
+      padding: 25px;
+    }
+    #headshot {
+      height: 150px;
+      width: 150px;
+    }
+  .navgrid-flexend {
+      display: none;
+    }
+  .hamburger {
+    position: relative;
+    top: 20px;
+    }
+  .nav {
+    color: white;
+    font-size: 12px;
+    a {
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-bottom: 1px solid black;
+        box-shadow: none;
+        display: list-item;
+    }
+    nav {
+        position: relative;
+        bottom: 40px;
+    }
+    a:hover {
+        background-color: black;
+    }
+  }
+  .grid-item {
+      padding-left: 20px;
+  }
+  .grid-1c {
+      position: relative;
+      right: 30px;
+  }
+  .grid-portfolio {
+    position: relative;
+    right: 30px;
+  }
+  .grid-social {
+    position: relative;
+    right: 30px;
+  }
+  .contact-grid {
+      padding: 10px;
+      p {
+          padding: 10px;
+      }
+  }
+  #introtext {
+    padding-left: 20px;
+    margin: 0;
+  }
+  .about-content {
+      img {
+          max-width: 250px;
+          max-height: 250px;
+          padding-left: 70px !important;
+      }
+  }
+  #button {
+      position: relative;
+      top: 10px;
+      left: 110px;
+  }
+  .home-portfolio {
+      padding-left: 50px;
+      img {
+        max-width: 250px;
+        max-height: 250px;
+      }
+      }
+    .portfolio-main {
+        text-align: center;
+        img {
+            max-width: 250px;
+            max-height: 250px;
+            padding-left: 60px;
+        }
+    }
+}
+
+//This is the CSS for Tablet View //
+
+@media only screen and (max-width: 1024px) {
+    #introtext {
+        margin-right: 50px;
+    }
+}
+
+//Grid to contain and position my content. The repeat and auto fit allows for the columns to fit multiple screensizes and stack automatically on smaller screens. //
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    background-color: black;
+    text-align: center;
+  }
+
+  .navgrid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: $primary-color;
+      font-size: 20px;
+  }
+
+  .navgrid-item {
+      display: flex;
+      justify-content: space-evenly;
+  }
+
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    background-color: black;
+  }
+
+  .grid-p1 {
+      text-align: left;
+      margin-left: 50px;
+      display: flex;
+      justify-content: center;
+  }
+
+  #twitter-widget-0 {
+      max-width: 450px !important;
+      max-height: 350px !important;
+  }
+
+  .grid-1c {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    background-color: black;
+    margin-top: 30px;
+  }
+
+.grid-social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    background-color: black;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .grid-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    background-color: $primary-color;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    a:hover {
+        color: black;
+    }
+  }
+
+  .grid-4c {
+    text-align: left;
+    margin-left: 50px;
+  }
+
+  .copyright {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px;
+    background-color: #218083;
+  }
+
+  //Flex Grid to organise the contact form section content. Using flex to center align the content which will then shrink to fit multiple devices. //
+  .contact-grid {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-color: grey;
+      padding-bottom: 30px;
+      margin: 0;
+      color: white;
+  }
+
+  //Styling the contact form with flexbox and multiple styles on all fields. //
+  .contact {
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      form, label, input, textarea, button {
+          width: 250px;
+          padding: 10px;
+          margin: 5px;
+      }
+      input {
+          border: none;
+          border-bottom: 2px white solid;
+          background-color: transparent;
+          color: white;
+          font-size: 16px;
+      }
+      button {
+          margin-top: 20px;
+      }
+      label {
+          @include mainfont;
+      }
+      button:hover {
+        background-color: transparent;
+        border: 2px solid $primary-color;
+      }
+      textarea {
+        font-family: 'Poppins', sans-serif;
+      }
+  }
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    @include mainfont();
+    div {
+        margin: 20px;
+    }
+    p {
+        @include blogfont();
+    }
+}
+
+.blog-intro {
+    text-align: center;
+    margin: 0;
+}
+
+.portfolio-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    text-align: center;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    h3 {
+        text-align: center;
+        text-decoration: underline;
+        text-underline-position: under;
+        text-decoration-color: $primary-color;
+    }
+    h4 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        margin: 10px;
+        padding-left: 20px;
+    }
+    img {
+        padding-left: 100px;
+        padding-top: 20px;
+    }
+}
+
+.home-portfolio {
+    text-align: center;
+}
+
+.portfolio-img {
+    max-width: 600px;
+}

@@ -1,16 +1,3 @@
-.box {
-  color: blue;
-}
-
-.box li {
-  background-color: red;
-}
-
-.box a {
-  color: black;
-  font-size: 20px;
-}
-
 h1, h2, h3, h4, h5, h6, a, button {
   font-family: 'Lato', sans-serif;
 }
@@ -93,6 +80,12 @@ button {
           transform: none;
 }
 
+#button {
+  position: relative;
+  top: 60px;
+  right: 320px;
+}
+
 .nav {
   color: white;
 }
@@ -142,11 +135,6 @@ button {
   padding-top: 40px;
 }
 
-.headshot {
-  padding-top: 40px;
-  padding-left: 100px;
-}
-
 .headshot-grayscale {
   filter: none;
   -webkit-filter: grayscale(0%);
@@ -189,8 +177,15 @@ button {
   text-decoration: none;
 }
 
+#logotext:link {
+  color: white;
+  text-decoration: none;
+}
+
 #introtext {
-  margin-right: 50px;
+  margin-top: 50px;
+  margin-right: 60px;
+  text-align: left;
 }
 
 .navgrid-flexend {
@@ -202,7 +197,7 @@ button {
           justify-content: flex-end;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .hamburger {
     display: none;
   }
@@ -270,6 +265,41 @@ button {
   .contact-grid p {
     padding: 10px;
   }
+  #introtext {
+    padding-left: 20px;
+    margin: 0;
+  }
+  .about-content img {
+    max-width: 250px;
+    max-height: 250px;
+    padding-left: 70px !important;
+  }
+  #button {
+    position: relative;
+    top: 10px;
+    left: 110px;
+  }
+  .home-portfolio {
+    padding-left: 50px;
+  }
+  .home-portfolio img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .portfolio-main {
+    text-align: center;
+  }
+  .portfolio-main img {
+    max-width: 250px;
+    max-height: 250px;
+    padding-left: 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #introtext {
+    margin-right: 50px;
+  }
 }
 
 .grid-container {
@@ -278,6 +308,7 @@ button {
   -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   background-color: black;
+  text-align: center;
 }
 
 .navgrid {
@@ -309,6 +340,17 @@ button {
 .grid-p1 {
   text-align: left;
   margin-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#twitter-widget-0 {
+  max-width: 450px !important;
+  max-height: 350px !important;
 }
 
 .grid-1c {
@@ -420,5 +462,77 @@ button {
 
 .contact textarea {
   font-family: 'Poppins', sans-serif;
+}
+
+.blog-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.blog-grid div {
+  margin: 20px;
+}
+
+.blog-grid p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: white;
+  font-style: italic;
+}
+
+.blog-intro {
+  text-align: center;
+  margin: 0;
+}
+
+.portfolio-main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  text-align: center;
+}
+
+.about-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.about-content h3 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-position: under;
+  -webkit-text-decoration-color: #25c2c7;
+          text-decoration-color: #25c2c7;
+}
+
+.about-content h4 {
+  text-align: center;
+}
+
+.about-content p {
+  text-align: center;
+  margin: 10px;
+  padding-left: 20px;
+}
+
+.about-content img {
+  padding-left: 100px;
+  padding-top: 20px;
+}
+
+.home-portfolio {
+  text-align: center;
+}
+
+.portfolio-img {
+  max-width: 600px;
 }
 /*# sourceMappingURL=style.css.map */

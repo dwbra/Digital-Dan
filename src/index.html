@@ -55,10 +55,10 @@
                 <div class="grid-item headshot headshot-grayscale">
                     <img src="img/Headshot.jpg" id="headshot">
                 </div>
-                <div class="grid-item">
+                <div id="introtext">
                     <h2>Hi, welcome to my website!</h2>
-                    <p id="introtext">My name is Daniel Workman. I'm a junior full stack developer who is learnining to code at Coder Academy. I've completed a Bachelor of Commerce majoring in Mareting at UOW and currently work in a marketing agency. I love surfing, music, reading, golf, tennis, the gym and any sort of outdoor activity. Despite my love of the great outdoors I also love to code! Coding is great as it presents challenges daily and is an avenue for continuous learning.</p>
-                    <button class="button"><span>Learn More</span></button>
+                    <p>My name is Daniel Workman. I'm a junior full stack developer who is learnining to code at Coder Academy. I've completed a Bachelor of Commerce majoring in Mareting at UOW and currently work in a marketing agency. I love surfing, music, reading, golf, tennis, the gym and any sort of outdoor activity. Despite my love of the great outdoors I also love to code! Coding is great as it presents challenges daily and is an avenue for continuous learning.</p>
+                    <a href="pages/about.html"><button class="button"><span>Learn More</span></button></a>
                 </div>
               </div>
               <div class="grid-1c">
@@ -66,27 +66,32 @@
                     <h3>My Portfolio</h3>
                   </div>
               </div>
-              <div class="grid-portfolio">
-                  <div class="grid-p1">
-                      <p>This is a placeholder for this column</p>
+              <div class="grid-social">
+                  <div>
+                      <!--This is to force social profiles closer together without requiring css-->
                   </div>
                   <div class="grid-p1">
-                    <p>This is a placeholder for this column</p>
-                </div>
-                <div class="grid-p1">
-                    <p>This is a placeholder for this column</p>
-                </div>
-              </div>
-              <div class="grid-social">
-                  <div class="grid-p1">
-                      <h4>Check Out My LinkedIn Profile</h4>
                       <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="danielworkman1"><a class="LI-simple-link" href='https://au.linkedin.com/in/danielworkman1?trk=profile-badge'>Daniel Workman</a></div>
                   </div>
                   <div class="grid-p1">
-                      <h4>Check out my Twitter Profile</h4>
                       <a class="twitter-timeline" href="https://twitter.com/dan_workman92?ref_src=twsrc%5Etfw">Tweets by dan_workman92</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                   </div>
+                  <div>
+                      <!--This is to force social profiles closer together without requiring css-->
+                  </div>
               </div>
+              <div class="grid-portfolio">
+                <div class="home-portfolio">
+                  <h4>My Website</h4>
+                  <p>This is a showcase of my website and the coding it required to build.</p>
+                  <img src="img/website.jpg" alt="digital-dan website portfolio">
+                </div>
+                <div class="home-portfolio">
+                  <h4>My Terminal App</h4>
+                  <p>This is a detailed showcase of a termainal app that I have built using Ruby.</p>
+                  <img src="img/terminal.jpg" alt="my terminal app">
+              </div>
+            </div>
               <div class="contact-grid">
                   <h3>Need something developed? I'd love to help!</h3>
                   <p>Use the contact form below to send me a message and I'll get back to you ASAP.</p>
@@ -114,7 +119,7 @@
             <footer>
                   <div class="grid-footer">
                       <div class="grid-4c">
-                          <h4>Logo</h4>
+                        <a href="index.html"><img src="img/af056231344157834d4482ae0373cc4c.png" style="justify-content: left;" id="logo"></a>
                       </div>
                       <div class="grid-4c">
                           <h4>Helpful Links</h4>

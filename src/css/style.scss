@@ -314,9 +314,16 @@ button {
 
 //This is the CSS for Tablet View //
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
     #introtext {
         margin-right: 50px;
+    }
+    #empty-divs {
+        display: none;
+    }
+    #headshot {
+        max-width: 400px;
+        max-height: 400px;
     }
 }
 
@@ -346,12 +353,12 @@ button {
     background-color: black;
   }
 
-  .grid-p1 {
-      text-align: left;
-      margin-left: 50px;
-      display: flex;
-      justify-content: center;
-  }
+//   .grid-p1 {
+//       text-align: left;
+//       margin-left: 50px;
+//       display: flex;
+//       justify-content: center;
+//   }
 
   #twitter-widget-0 {
       max-width: 450px !important;
@@ -371,6 +378,7 @@ button {
     background-color: black;
     margin-bottom: 50px;
     margin-top: 30px;
+    text-align: center;
   }
 
   .grid-footer {

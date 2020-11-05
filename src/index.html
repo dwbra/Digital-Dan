@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--Below is the head html section of my website. In this section, my CSS sheets  and Google Fonts are pulled in.
+    Also the meta charset and viewports are set for UX device optimisation. In addition to this, I have scripts for
+    LinkedIn and Iconify. The most interesting script here is my function script that acts as the hamburger menu
+    on click action. You can see in this script that it is pulling the navi with the ID "myLinks". You will see
+    further down the page the unique ID i've used to set this. I've also made the display style to flex to suit the 
+    layout of my navigation menu and website.-->
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -22,13 +28,17 @@
     </head>
     <body>
         <header>
+            <!--Below is the top bar content including the social media icons and marketing message text. I had to use
+            inline styling to set the text away from the social media icons. This top bar is hidden on mobile and tablet
+            devices. Here the Iconify classes are applied and without the script to pull the information these would not 
+            display correctly.-->
         <div class="social">
             <p style="margin-right: 180px;">Trusted Software Development From Sydney, Australia</p>
             <p>HTML | CSS | Javascript</p>
             <ul>
             <a href="https://twitter.com/dan_workman92"><span class="iconify" data-icon="fa-brands:twitter-square" data-inline="false"></span></a>
             <a href="https://www.linkedin.com/in/danielworkman1/"><span class="iconify" data-icon="ant-design:linkedin-outlined" data-inline="false"></span></a>
-            </ul>
+        </ul>
     </div>
         <div class="navgrid">
             <div class="navgrid-item">
@@ -52,7 +62,7 @@
     </header>
     <main>
             <div class="grid-container">
-                <div class="grid-item headshot headshot-grayscale">
+                <div class="headshot headshot-grayscale">
                     <img src="img/Headshot.jpg" id="headshot">
                 </div>
                 <div id="introtext">
@@ -71,10 +81,10 @@
                       <!--This is to force social profiles closer together without requiring css-->
                   </div>
                   <div>
-                      <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="danielworkman1"><a class="LI-simple-link" href='https://au.linkedin.com/in/danielworkman1?trk=profile-badge'>Daniel Workman</a></div>
+                      <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="danielworkman1"><a class="LI-simple-link" href='https://au.linkedin.com/in/danielworkman1?trk=profile-badge'>Daniel Workman</a></div>
                   </div>
                   <div>
-                      <a class="twitter-timeline" href="https://twitter.com/dan_workman92?ref_src=twsrc%5Etfw">Tweets by dan_workman92</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                      <a class="twitter-timeline" href="https://twitter.com/dan_workman92?ref_src=twsrc%5Etfw">Tweets by dan_workman92</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                   </div>
                   <div id="empty-divs">
                       <!--This is to force social profiles closer together without requiring css-->
@@ -92,36 +102,31 @@
                   <img src="img/terminal.jpg" alt="my terminal app">
               </div>
             </div>
-              <div class="contact-grid">
-                  <h3>Need something developed? I'd love to help!</h3>
-                  <p>Use the contact form below to send me a message and I'll get back to you ASAP.</p>
-                  <form class="contact">
-                      <div class="leftrightgoodnight">
-                        <label>First Name </label>
-                        <input type="text">
-                        <label>Last Name </label>
-                        <input type="text">
-                    </div>
-                    <!-- <div class="leftrightgoodnight"> -->
-                        <label>Phone Number</label>
-                        <input type="text">
-                        <label>Email</label>
-                        <input type="text">
-                    <!-- </div> -->
-                    <label>Message</label>
-                    <textarea></textarea>
-                    <button>Submit</button>
-                  </form>
-                </div>
-              </div>
         </main>
     </body>
             <footer>
+                <div class="contact-grid">
+                    <h3>Need something developed? I'd love to help!</h3>
+                    <p>Use the contact form below to send me a message and I'll get back to you ASAP.</p>
+                    <form class="contact">
+                          <label>First Name </label>
+                          <input type="text">
+                          <label>Last Name </label>
+                          <input type="text">
+                          <label>Phone Number</label>
+                          <input type="text">
+                          <label>Email</label>
+                          <input type="text">
+                      <label>Message</label>
+                      <textarea></textarea>
+                      <button>Submit</button>
+                    </form>
+                </div>
                   <div class="grid-footer">
-                      <div class="grid-4c">
+                      <div id="footer1">
                         <a href="index.html"><img src="img/af056231344157834d4482ae0373cc4c.png" style="justify-content: left;" id="logo"></a>
                       </div>
-                      <div class="grid-4c">
+                      <div>
                           <h4>Helpful Links</h4>
                           <a href="https://github.com/dwbra"><p>GitHub</p></a>
                           <a href="https://codepen.io/your-work"><p>Code Pen</p></a>
@@ -129,11 +134,11 @@
                           <a href="https://news.ycombinator.com/"><p>Hacker News</p></a>
                           <a href="https://www.xml-sitemaps.com/"><p>Sitemap Generator</p></a>
                       </div>
-                      <div class="grid-4c">
+                      <div>
                           <h4>Contact Me & Start A Conversation!</h4>
                             <a href="https://twitter.com/intent/tweet?screen_name=dan_workman92&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @dan_workman92</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                       </div>
-                      <div class="grid-4c">
+                      <div>
                           <h4>Shout Outs To Coder Academy!</h4>
                           <p>Find out more information below.</p>
                           <a href="https://coderacademy.edu.au/"><img src="img/600_473781620.jpeg" height="100px" width="200px"></a>

@@ -50,6 +50,11 @@ body {
     color: white;   
 }
 
+main {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 //Styling for the Button - Including an arrow on hover//
 button {
     background-color: $primary-color;
@@ -99,11 +104,9 @@ button {
     transform: none;
 }
 
-#button {
-    position: relative;
-    top: 60px;
-    right: 320px;
-}
+// #button {
+//     text-align: right;
+// }
 
 
 // Styling the navigation menu //
@@ -198,7 +201,6 @@ button {
 }
 
 #introtext {
-    margin-top: 50px;
     margin-right: 60px;
     text-align: left;
 }
@@ -218,7 +220,7 @@ button {
 
 //This is the CSS for Mobile View //
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .social {
         display: none;
     }
@@ -236,8 +238,9 @@ button {
       display: none;
     }
   .hamburger {
-    position: relative;
-    top: 20px;
+    position: absolute;
+    left: 80%;
+    top: 2%;
     }
   .nav {
     color: white;
@@ -252,7 +255,8 @@ button {
     }
     nav {
         position: relative;
-        bottom: 40px;
+        right: 20%;
+        bottom: 30px;
     }
     a:hover {
         background-color: black;
@@ -270,8 +274,8 @@ button {
     right: 30px;
   }
   .grid-social {
-    position: relative;
-    right: 30px;
+      padding-left: 20px;
+      padding-right: 40px;
   }
   .contact-grid {
       padding: 10px;
@@ -281,6 +285,7 @@ button {
   }
   #introtext {
     padding-left: 20px;
+    padding-right: 50px;
     margin: 0;
   }
   .about-content {
@@ -296,7 +301,7 @@ button {
       left: 110px;
   }
   .home-portfolio {
-      padding-left: 50px;
+      padding-left: 30px;
       img {
         max-width: 250px;
         max-height: 250px;
@@ -314,17 +319,64 @@ button {
 
 //This is the CSS for Tablet View //
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     #introtext {
         margin-right: 50px;
+        margin-top: 0;
     }
     #empty-divs {
         display: none;
     }
     #headshot {
-        max-width: 400px;
-        max-height: 400px;
+        max-width: 300px;
+        max-height: 300px;
     }
+    #footer1 {
+        display: none;
+    }
+    .grid-footer {
+        padding-right: 30px;
+    }
+    .social {
+        display: none;
+    }
+    #logotext {
+        display: none;
+    }
+    .navgrid-flexend {
+        display: none;
+      }
+    .home-portfolio {
+        img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+    }
+    .hamburger {
+        position: absolute;
+        left: 80%;
+        top: 2%;
+    }
+    .nav {
+        color: white;
+        font-size: 12px;
+        a {
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-bottom: 1px solid black;
+            box-shadow: none;
+            display: list-item;
+        }
+        nav {
+            position: relative;
+            right: 20%;
+            bottom: 30px;
+        }
+        a:hover {
+            background-color: black;
+        }
+      }
 }
 
 //Grid to contain and position my content. The repeat and auto fit allows for the columns to fit multiple screensizes and stack automatically on smaller screens. //
@@ -351,6 +403,7 @@ button {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     background-color: black;
+    grid-gap: 50px;
   }
 
 //   .grid-p1 {
@@ -392,11 +445,10 @@ button {
     a:hover {
         color: black;
     }
-  }
-
-  .grid-4c {
-    text-align: left;
-    margin-left: 50px;
+    div {
+        text-align: left;
+        margin-left: 50px;
+    }
   }
 
   .copyright {
@@ -491,10 +543,6 @@ button {
         margin: 10px;
         padding-left: 20px;
     }
-    img {
-        padding-left: 100px;
-        padding-top: 20px;
-    }
 }
 
 .home-portfolio {
@@ -503,4 +551,16 @@ button {
 
 .portfolio-img {
     max-width: 600px;
+}
+
+#about {
+    text-align: center;
+    button {
+        margin-top: 20px;
+    }
+    img {
+        margin-top: 20px;
+        max-width: 350px;
+        max-height: 350px;
+    }
 }

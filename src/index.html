@@ -31,7 +31,7 @@
             <!--Below is the top bar content including the social media icons and marketing message text. I had to use
             inline styling to set the text away from the social media icons. This top bar is hidden on mobile and tablet
             devices. Here the Iconify classes are applied and without the script to pull the information these would not 
-            display correctly.-->
+            display correctly. I've also used UL tags to control the position of the icons to make them align nicely.-->
         <div class="social">
             <p style="margin-right: 180px;">Trusted Software Development From Sydney, Australia</p>
             <p>HTML | CSS | Javascript</p>
@@ -40,11 +40,15 @@
             <a href="https://www.linkedin.com/in/danielworkman1/"><span class="iconify" data-icon="ant-design:linkedin-outlined" data-inline="false"></span></a>
         </ul>
     </div>
+    <!--Below is the website navigation, this section uses the Grid css property to divide the content section. The navgrid-items use
+    flex to position the content in the navgrid as I'd like them. An ID has been used on the logo and logo text to force the exact size that I'd like.-->
         <div class="navgrid">
             <div class="navgrid-item">
                 <a href="index.html"><img src="img/af056231344157834d4482ae0373cc4c.png" style="justify-content: left;" id="logo"></a>
                 <a href="index.html" id="logotext"><h1>Digital Dan</h1></a>
             </div>
+            <!--Below is the hamburger menu. This is javascript action which allows the click function to open and close my menu. I used a hamburger imgage as I have issues trying to use
+            an icon from Iconify. The Image worked much better but was unable to have on click CSS actions that I would have liked.-->
         <div class="hamburger">
             <a href="javascript:void(0);"><img src="img/hamburger-45.png" onclick="myFunction()"></a>        
         </div>
@@ -61,6 +65,9 @@
     </div>
     </header>
     <main>
+        <!--Below is the main content for the boyd of my website. I put left/right 50px padding on this div to give the page a bit of space.
+        I introduced a class for greyscaling my headshot image on hover and used an introtext ID to control the position and style of the text.
+        Finally the button class has the unique styling on it for hover with the arrows.-->
             <div class="grid-container">
                 <div class="headshot headshot-grayscale">
                     <img src="img/Headshot.jpg" id="headshot">
@@ -71,6 +78,7 @@
                     <a href="pages/about.html"><button class="button"><span>Learn More</span></button></a>
                 </div>
               </div>
+              <!--In the below div the content for my portfolio is displayed. I used grid to control the content layout and style of the div content.-->
               <div class="grid-social">
                   <div>
                     <h3>My Portfolio</h3>
@@ -104,6 +112,9 @@
             </div>
         </main>
     </body>
+    <!--Below is the footer section for my website. This appears on every page of the website. It contacts a contact form which is in a flex layout to contain the content.
+    This also contains all of the styling for the individal form elements such as input fields, labels etc. Underneath this section is a 4 column grid
+    that contains helpful links for users to enjoy and also navigate around the website.-->
             <footer>
                 <div class="contact-grid">
                     <h3>Need something developed? I'd love to help!</h3>
@@ -122,6 +133,8 @@
                       <button>Submit</button>
                     </form>
                 </div>
+                <!--The below div uses CSS Grid to structure the content and add custom sytling. The footer1 ID is used to hide this first div on tablet view to make it sit in a nice three column. Additional inline styling and ID Logo has been
+                used to control the logo icon in the first div.-->
                   <div class="grid-footer">
                       <div id="footer1">
                         <a href="index.html"><img src="img/af056231344157834d4482ae0373cc4c.png" style="justify-content: left;" id="logo"></a>
@@ -145,6 +158,8 @@
                       </div>
                   </div>
               </footer>
+              <!--Below is the copyright bar. In this section I've included a class for content styling and also a script that pulls the correct year 
+                so that I don't have to update the year manually each year.-->
               <div class="copyright">
                   Copright © Digital-Dan <script type="text/javascript">
                     document.write(new Date().getFullYear());

@@ -376,7 +376,18 @@ button {
         a:hover {
             background-color: black;
         }
-      }
+    }
+    #about {
+        text-align: center;
+        button {
+            margin-top: 20px;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 350px;
+            max-height: 350px;
+        }
+    }
 }
 
 //Grid to contain and position my content. The repeat and auto fit allows for the columns to fit multiple screensizes and stack automatically on smaller screens. //
@@ -560,7 +571,5 @@ button {
     }
     img {
         margin-top: 20px;
-        max-width: 350px;
-        max-height: 350px;
     }
 }

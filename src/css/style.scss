@@ -1,4 +1,4 @@
-//SCSS Syntaxes //
+//SCSS Syntaxes to use throughout my styling//
 $primary-color: #25c2c7;
 
 @mixin bold-italic {
@@ -50,6 +50,11 @@ body {
     color: white;   
 }
 
+main {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 //Styling for the Button - Including an arrow on hover//
 button {
     background-color: $primary-color;
@@ -99,12 +104,6 @@ button {
     transform: none;
 }
 
-#button {
-    position: relative;
-    top: 60px;
-    right: 320px;
-}
-
 
 // Styling the navigation menu //
 .nav {
@@ -122,6 +121,12 @@ button {
     a:hover {
         background-color: black;
     }
+}
+
+//Using flex to position the content in my nav div at the end of the column. This is pushing the menu to the right hand side of the page.//
+.navgrid-flexend {
+    display: flex;
+    justify-content: flex-end;
 }
 
 //Styling social icons //
@@ -146,10 +151,10 @@ button {
 }
 
 
-.portfolio-section {
-    padding-left: 200px;
-    padding-top: 40px;
-}
+// .portfolio-section {
+//     padding-left: 200px;
+//     padding-top: 40px;
+// }
 
 //Styling for Headshot hover greyscale //
 .headshot-grayscale {
@@ -163,6 +168,7 @@ button {
     -webkit-filter: grayscale(100%);
   }
 
+//Forcing the headshot image to be 400x400px on desktop view//
 #headshot {
     width: 400px;
     height: 400px;
@@ -197,18 +203,16 @@ button {
     text-decoration: none;
 }
 
+//Positinging the introtext section on my homepage //
 #introtext {
-    margin-top: 50px;
     margin-right: 60px;
     text-align: left;
 }
 
-.navgrid-flexend {
-    display: flex;
-    justify-content: flex-end;
-}
 
 //This is the CSS for Desktop View //
+
+//The below css hides the hamburger menu on screens with a size larger than 1042px//
 
 @media only screen and (min-width: 1024px) {
     .hamburger {
@@ -218,7 +222,11 @@ button {
 
 //This is the CSS for Mobile View //
 
-@media only screen and (max-width: 768px) {
+//The below CSS is to control how the website is displayed on mobile devices with a screen size of up to 767px.//
+//Majority of the CSS for mobile is reducing image sizes to ensure that the content fits the screen size.//
+//There is additional styling to control how the hamburger menu appears and looks. 
+
+@media only screen and (max-width: 767px) {
     .social {
         display: none;
     }
@@ -236,8 +244,9 @@ button {
       display: none;
     }
   .hamburger {
-    position: relative;
-    top: 20px;
+    position: absolute;
+    left: 80%;
+    top: 2%;
     }
   .nav {
     color: white;
@@ -252,7 +261,8 @@ button {
     }
     nav {
         position: relative;
-        bottom: 40px;
+        right: 20%;
+        bottom: 30px;
     }
     a:hover {
         background-color: black;
@@ -270,8 +280,8 @@ button {
     right: 30px;
   }
   .grid-social {
-    position: relative;
-    right: 30px;
+      padding-left: 20px;
+      padding-right: 40px;
   }
   .contact-grid {
       padding: 10px;
@@ -281,13 +291,14 @@ button {
   }
   #introtext {
     padding-left: 20px;
+    padding-right: 50px;
     margin: 0;
+    text-align: left;
   }
   .about-content {
       img {
           max-width: 250px;
           max-height: 250px;
-          padding-left: 70px !important;
       }
   }
   #button {
@@ -296,7 +307,7 @@ button {
       left: 110px;
   }
   .home-portfolio {
-      padding-left: 50px;
+      padding-left: 30px;
       img {
         max-width: 250px;
         max-height: 250px;
@@ -307,16 +318,88 @@ button {
         img {
             max-width: 250px;
             max-height: 250px;
-            padding-left: 60px;
         }
+    }
+    .headshot {
+        text-align: left;
     }
 }
 
 //This is the CSS for Tablet View //
 
-@media only screen and (max-width: 1024px) {
+//The CSS below applies to devices with a screen size between 768 and 1023 px. This is important as it addresses tablet devices.
+//There are a lot of ID's used to control image size to ensure all of the content fits tablet screen view. 
+//There is also CSS hiding the top bar and menu on smaller screen sizes. 
+//Additionally there is CSS to style the hamburger menu and control how it displays on click.
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     #introtext {
         margin-right: 50px;
+        margin-top: 0;
+    }
+    #empty-divs {
+        display: none;
+    }
+    #headshot {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    #footer1 {
+        display: none;
+    }
+    .grid-footer {
+        padding-right: 30px;
+    }
+    .social {
+        display: none;
+    }
+    #logotext {
+        display: none;
+    }
+    .navgrid-flexend {
+        display: none;
+      }
+    .home-portfolio {
+        img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+    }
+    .hamburger {
+        position: absolute;
+        left: 80%;
+        top: 2%;
+    }
+    .nav {
+        color: white;
+        font-size: 12px;
+        a {
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-bottom: 1px solid black;
+            box-shadow: none;
+            display: list-item;
+        }
+        nav {
+            position: relative;
+            right: 20%;
+            bottom: 30px;
+        }
+        a:hover {
+            background-color: black;
+        }
+    }
+    #about {
+        text-align: center;
+        button {
+            margin-top: 20px;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 350px;
+            max-height: 350px;
+        }
     }
 }
 
@@ -328,6 +411,7 @@ button {
     text-align: center;
   }
 
+  //This is the grid used to contain the navigation bar. I've used three columns to contain the content which I've then styled using additional classes.
   .navgrid {
       display: grid;
       grid-template-columns: auto auto auto;
@@ -335,29 +419,26 @@ button {
       font-size: 20px;
   }
 
+//This styling helps my navigation menu have some more spacing inbetween the elements.
   .navgrid-item {
       display: flex;
       justify-content: space-evenly;
   }
-
+//The grid format below will automatically create as many even columns as I create in my div. It will also automatically stack neatly across devices if the windows are brought in.
 .grid-portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     background-color: black;
+    grid-gap: 50px;
   }
 
-  .grid-p1 {
-      text-align: left;
-      margin-left: 50px;
-      display: flex;
-      justify-content: center;
-  }
-
+//I've added an ID to my twitter widget to override the sizing automatically applied by Twitter. This is used to position the content similar to the LinkedIn profile for design.
   #twitter-widget-0 {
       max-width: 450px !important;
       max-height: 350px !important;
   }
 
+//The grid format below will automatically create as many even columns as I create in my div. It will also automatically stack neatly across devices if the windows are brought in.
   .grid-1c {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -365,14 +446,16 @@ button {
     margin-top: 30px;
   }
 
+//The grid format below will automatically create as many even columns as I create in my div. It will also automatically stack neatly across devices if the windows are brought in.
 .grid-social {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     background-color: black;
     margin-bottom: 50px;
     margin-top: 30px;
+    text-align: center;
   }
-
+//This CSS uses the grid property to control the layout of the div content. It also includes various styling on the elements within that div.
   .grid-footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -384,13 +467,13 @@ button {
     a:hover {
         color: black;
     }
+    div {
+        text-align: left;
+        margin-left: 50px;
+    }
   }
 
-  .grid-4c {
-    text-align: left;
-    margin-left: 50px;
-  }
-
+//The copyright section needed to have independent styling that applys a different style of styling to the rest of the website.
   .copyright {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
@@ -443,6 +526,7 @@ button {
       }
   }
 
+//This styling utilises CSS Grid to control the content layout. It also includes a mixin and element styling to dictate the styling of the divs elements.
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -455,17 +539,20 @@ button {
     }
 }
 
+//CSS to style the intro div on my blog.
 .blog-intro {
     text-align: center;
     margin: 0;
 }
 
+//CSS to style the layout and content format of my portfolio page.
 .portfolio-main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     text-align: center;
 }
 
+//This CSS uses grid to structure my content. I've then stylied the individual elements in the div using SCSS syntaxes alongside vanilla CSS.
 .about-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -483,16 +570,25 @@ button {
         margin: 10px;
         padding-left: 20px;
     }
-    img {
-        padding-left: 100px;
-        padding-top: 20px;
-    }
 }
 
+//Using a CSS class to force the on page content into the center of the div.
 .home-portfolio {
     text-align: center;
 }
 
+//Using CSS to control the image sizes on my portfolio page.
 .portfolio-img {
     max-width: 600px;
+}
+
+//Using CSS to control the about image and ensure it center aligns across all devices and has appropriate padding between it and the PDF button below.
+#about {
+    text-align: center;
+    button {
+        margin-top: 20px;
+    }
+    img {
+        margin-top: 20px;
+    }
 }

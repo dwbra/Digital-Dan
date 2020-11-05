@@ -105,6 +105,15 @@ button {
   background-color: black;
 }
 
+.navgrid-flexend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .iconify {
   width: 40px;
   height: 40px;
@@ -127,11 +136,6 @@ button {
 
 .social a {
   color: white;
-}
-
-.portfolio-section {
-  padding-left: 200px;
-  padding-top: 40px;
 }
 
 .headshot-grayscale {
@@ -184,15 +188,6 @@ button {
 #introtext {
   margin-right: 60px;
   text-align: left;
-}
-
-.navgrid-flexend {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -269,11 +264,11 @@ button {
     padding-left: 20px;
     padding-right: 50px;
     margin: 0;
+    text-align: left;
   }
   .about-content img {
     max-width: 250px;
     max-height: 250px;
-    padding-left: 70px !important;
   }
   #button {
     position: relative;
@@ -293,7 +288,9 @@ button {
   .portfolio-main img {
     max-width: 250px;
     max-height: 250px;
-    padding-left: 60px;
+  }
+  .headshot {
+    text-align: left;
   }
 }
 

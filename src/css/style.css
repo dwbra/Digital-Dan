@@ -155,8 +155,8 @@ button {
 }
 
 #logo {
-  max-width: 90px;
-  max-height: 100px;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 #logo:hover {
@@ -216,7 +216,6 @@ button {
   .hamburger {
     position: absolute;
     left: 80%;
-    top: 2%;
   }
   .nav {
     color: white;
@@ -292,6 +291,10 @@ button {
   .headshot {
     text-align: left;
   }
+  #logo {
+    max-width: 125px;
+    max-height: 125px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -328,7 +331,7 @@ button {
   .hamburger {
     position: absolute;
     left: 80%;
-    top: 2%;
+    top: 1%;
   }
   .nav {
     color: white;
@@ -361,6 +364,10 @@ button {
     margin-top: 20px;
     max-width: 350px;
     max-height: 350px;
+  }
+  #logo {
+    max-width: 200px;
+    max-height: 200px;
   }
 }
 

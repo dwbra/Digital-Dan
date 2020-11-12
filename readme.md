@@ -1,6 +1,6 @@
 # A link (URL) to your published portfolio website
 
-digital-dan.com.au
+https://competent-kilby-3961c3.netlify.app/
 
 # A link to your GitHub repo
 
@@ -20,8 +20,6 @@ The purpose of this website is to showcase my development skills to potential em
 The functionality of the website must be simple and practical. All links must work as intended and the website should offer an easy user experience across multiple devices. The core features of the website will include a navigation menu, main body content, a footer, a blog, images, a form, and links to social media pages as per the assessment guideline requirements. 
 
 The sitemap will operate in a very basic structure with the index.html page operating as the home and parent. The child pages will be About, Portfolio, Blog and Contact. There will be no grandchildren pages. In the footer of the website there will be links to external sources that wil be mentioned in the site architecture (sitemap).
-
-################ INCLUDE SCREENSHOTS
 
 The target audience of this website will be potential employers in the tech industry. For this reason it is imperative that the website is professional, functional, and user friendly. 
 

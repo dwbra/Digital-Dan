@@ -150,12 +150,6 @@ button {
     }
 }
 
-
-// .portfolio-section {
-//     padding-left: 200px;
-//     padding-top: 40px;
-// }
-
 //Styling for Headshot hover greyscale //
 .headshot-grayscale {
     filter: none;
@@ -176,8 +170,8 @@ button {
 
 //Styling to force the logo width and hover changes //
 #logo {
-    max-width: 90px;
-    max-height: 100px;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 #logo:hover {
@@ -246,7 +240,6 @@ button {
   .hamburger {
     position: absolute;
     left: 80%;
-    top: 2%;
     }
   .nav {
     color: white;
@@ -323,6 +316,10 @@ button {
     .headshot {
         text-align: left;
     }
+    #logo {
+        max-width: 125px;
+        max-height: 125px;
+    }
 }
 
 //This is the CSS for Tablet View //
@@ -368,7 +365,7 @@ button {
     .hamburger {
         position: absolute;
         left: 80%;
-        top: 2%;
+        top: 1%;
     }
     .nav {
         color: white;
@@ -400,6 +397,10 @@ button {
             max-width: 350px;
             max-height: 350px;
         }
+    }
+    #logo {
+        max-width: 200px;
+        max-height: 200px;
     }
 }
 
@@ -592,3 +593,7 @@ button {
         margin-top: 20px;
     }
 }
+
+// .about {
+//     text-align: center;
+// }
